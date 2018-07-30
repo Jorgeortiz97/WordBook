@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="pane" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" minHeight="30.0" mnemonicParsing="false" onAction="#handleBackButton" prefWidth="100.0" text="Atrás" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <MenuBar layoutX="48.0" layoutY="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleImport" text="Import" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExport" text="Export" />
+                  <MenuItem mnemonicParsing="false" onAction="#handlePrintDoc" text="Print RTF Document" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleExitButton" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Profile">
+            <items>
+                  <Menu mnemonicParsing="false" text="View Stats">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleHistorical" text="Historical progression" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleTopicsStats" text="Progress by topic" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleGameStats" text="All played games" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#handleResetProfile" text="Reset profile" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+                  <Menu mnemonicParsing="false" text="Change look&amp;feel">
+                    <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleDarkTheme" text="DarkTheme" />
+                      <MenuItem mnemonicParsing="false" onAction="#handleLima" text="Lima" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleBlueSky" text="BlueSky" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSoftPink" text="SoftPink" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleColorful" text="Colorful" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="About">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleHelpButton" text="Help" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAuthorButton" text="Author" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="version" layoutX="14.0" layoutY="470.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+   </children>
+</AnchorPane>
